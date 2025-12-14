@@ -1,11 +1,11 @@
 import { app } from './conf';
 import 'dotenv/config';
 
-const PORT = process.env.PORT
-const HOST = process.env.HOST
+const PORT: number = Number(process.env.PORT)
+const HOST: string = String(process.env.HOST)
 
 try {
-    app.listen({ host: HOST, port: Number(PORT) })
+    app.listen({ host: HOST, port: PORT })
 } catch(e) {
     app.log.error(e)
     process.exit(1);
