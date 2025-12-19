@@ -1,4 +1,6 @@
-export function generatorUUID() 
+import { _UUID } from '../../helpers/types/type-UUID'
+
+export function generatorUUID(): _UUID 
 {
     // Gerar 16 bytes aleatórios (128 bits total)
     const bytes = new Uint8Array(16);
@@ -13,11 +15,13 @@ export function generatorUUID()
     // Converter os bytes para a string formatada
     const hex = Array.from(bytes).map(b => b.toString(16).padStart(2, '0'));
 
-    return [
+    const uuidString = [
         hex.slice(0, 4).join(''),
         hex.slice(4, 6).join(''),
         hex.slice(6, 8).join(''),
         hex.slice(8, 10).join(''),
         hex.slice(10, 16).join('')
     ].join('-');
+
+    return uuidString as _UUID;
 }

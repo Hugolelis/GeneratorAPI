@@ -3,7 +3,7 @@ import { FastifyRequest, FastifyReply } from 'fastify';
 import { generatorUUID } from '../core/generators/G-UUID';
 import { validatorUUID } from '../core/validators/V-UUID';
 
-import { _UUID } from "../helpers/types/types-UUID";
+import { _UUID } from "../helpers/types/type-UUID";
 
 export class UUIDController 
 {
