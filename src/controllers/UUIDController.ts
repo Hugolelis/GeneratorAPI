@@ -1,18 +1,18 @@
 import { FastifyRequest, FastifyReply } from 'fastify';
 
-import { generatorUUID } from '../core/generators/G-UUID';
+import { uuidGenerator } from '../core/generators/G-UUID';
 import { validatorUUID } from '../core/validators/V-UUID';
 
 import { uuidErrors } from '../helpers/errors/uuid-errors';
 import { writeLogs } from '../helpers/utils/write_logs';
 
-import { _UUID } from "../helpers/types/type-UUID";
+import { _UUID } from "../helpers/types/T-UUID";
 
 export class UUIDController 
 {
     static async generate(req: FastifyRequest, reply: FastifyReply) 
     {
-        const UUID: any = generatorUUID();
+        const UUID: any = uuidGenerator();
         uuidErrors.ensureGenerator(UUID);
         writeLogs.uuid({ UUID: UUID }, `UUID gerado com sucesso`)
         return reply.send({ "UUID": UUID });

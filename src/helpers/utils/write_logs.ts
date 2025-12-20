@@ -25,4 +25,10 @@ export class writeLogs
         const logger = this.createLogger('uuid');
         logger.info(data, message);
     }
+
+    static sortedNumber(data: object, message: string) 
+    {
+        const logger = this.createLogger('sortedNumber');
+        logger.info(data, message);
+    }
 }

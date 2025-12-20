@@ -1,0 +1,1 @@
+export type _sortedNumber = number | number[]

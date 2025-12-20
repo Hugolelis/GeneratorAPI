@@ -19,3 +19,6 @@ app.register(healthRoutes, { prefix: '/api/verify' })
 
 import { UUIDRoutes } from "./routes/uuidRoutes";
 app.register(UUIDRoutes, { prefix: '/api/UUID' })
+
+import { SortedNumberRoutes } from "./routes/sortedNumberRoutes";
+app.register(SortedNumberRoutes, { prefix: 'api/sortedNumber/'})

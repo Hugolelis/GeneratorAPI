@@ -1,6 +1,6 @@
-import { _UUID } from '../../helpers/types/type-UUID'
+import { _UUID } from '../../helpers/types/T-UUID'
 
-export function generatorUUID(): _UUID 
+export function uuidGenerator(): _UUID 
 {
     // Gerar 16 bytes aleatórios (128 bits total)
     const bytes = new Uint8Array(16);
