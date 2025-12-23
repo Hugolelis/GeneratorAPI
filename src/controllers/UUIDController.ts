@@ -12,7 +12,7 @@ export class UUIDController
 {
     static async generate(req: FastifyRequest, reply: FastifyReply) 
     {
-        const UUID: any = uuidGenerator();
+        const UUID: _UUID = uuidGenerator();
         uuidErrors.ensureGenerator(UUID);
         writeLogs.uuid({ UUID: UUID }, `UUID gerado com sucesso`)
         return reply.send({ "UUID": UUID });
